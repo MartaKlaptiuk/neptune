@@ -1,0 +1,76 @@
+body{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+  	height: 100vh;
+  	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#main-container{
+	position: relative;
+	width: 70%;
+	height: 90vh; 
+	border: 2px solid #FF1493;
+}
+nav a{
+	position: absolute;
+	color: black;
+
+}
+nav a:nth-child(1){
+	top: 0;
+	left: 0;
+	writing-mode: tb-rl;
+	-o-transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+}
+nav a:nth-child(2){
+	position: relative;
+	top: 0;
+left: 50%;
+    margin-left: -50px;
+}
+nav a:nth-child(3){
+	position: relative;
+	top: 0;
+	left: 50%; 
+	
+}
+nav a:nth-child(4){
+	top: 0;
+	right: 0;
+}
+nav a:nth-child(5){
+	top: 45%;
+	right: 0;
+	 writing-mode: tb-rl;
+	-o-transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+	-moz-transform: rotate(360deg);
+}
+nav a:nth-child(6){
+	bottom: 0;
+	right: 0;
+	 writing-mode: tb-rl;
+	-o-transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+	-moz-transform: rotate(360deg)
+}
+nav a:nth-child(7){
+	bottom: 0;
+	left: 45%;
+}
+nav a:nth-child(8){
+	bottom: 0;
+	left: 0;
+}
+nav a:nth-child(9){
+	top: 45%;
+	left: 0;
+	writing-mode: tb-rl;
+	-o-transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+}
