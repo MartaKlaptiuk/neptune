@@ -5,6 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>NEPTUNE</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<script
+	  src="https://code.jquery.com/jquery-3.3.1.min.js"
+	  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	  crossorigin="anonymous"></script>
 </head>
 <body>
 	<div id="main-container">
@@ -19,6 +23,32 @@
 			<a href="#" class="nohover"><img src="img/logo.png"></a>
 			<a href="#">BOOKINGS</a>
 		</nav>
+			<div class="container">
+
+			  <div class="box"></div>
+			  <div class="box"></div>
+			  <div class="box"></div>
+			  <div class="box"></div>
+			  <div class="box"></div>
+			  <div class="box"></div>
+				<div class="divGalleryContent">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam laborum facere accusantium iure voluptate voluptatem sequi enim, officiis ipsum obcaecati corporis dolores est esse quis tempore, nostrum nihil culpa voluptatibus.</p>
+				</div>
+			  <div class="overlay"></div>
+
+		</div>
 	</div>
+
+	<script type="text/javascript">
+		$('.box').mouseover(function(){
+		var bg = $(this).css('background-image');	  
+			$('.box').css("background", "none");
+			$('.container').css("background-image", bg);	  
+		});
+		$('.box').mouseout(function(){		  
+			$('.box').css('background', "");
+			$('.container').css('background', '');		  
+		});
+</script>
 </body>
 </html>
