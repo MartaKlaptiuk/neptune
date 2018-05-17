@@ -194,7 +194,8 @@ nav a {
 .divGalleryContent p {
   position: relative;
   text-align: center;
-  width: 60%; }
+  width: 60%;
+  margin: 10% auto; }
 
 .close {
   position: absolute;

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>NEPTUNE</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script
+	  src="https://code.jquery.com/jquery-3.3.1.min.js"
+	  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	  crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="main-wrapper">
+		<div class="container">
+			<div class="bg">
+				<section class="menu">
+					 <div class="box"></div>
+					 <div class="box"></div>
+					 <div class="box"></div>
+					 <div class="box"></div>
+					 <div class="box"></div>
+					 <div class="box"></div>
+
+					 <div class="overlay"></div>
+				</section>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$('.box').mouseover(function(){
+		var bg = $(this).css('background-image');	  
+			$('.box').css("background", "none");
+			$('.menu').css("background-image", bg);	  
+		});
+		$('.box').mouseout(function(){		  
+			$('.box').css('background', "");
+			$('.menu').css('background', '');		  
+		});
+	</script>
+</body>
+</html>
