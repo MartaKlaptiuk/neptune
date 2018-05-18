@@ -187,7 +187,7 @@ nav a{
   z-index: 2;
   cursor: pointer;
   box-sizing: border-box;
-  background-size: cover;
+  background-size: cover !important;
 }
 .container .box{
 	&:nth-child(1) {

@@ -1,0 +1,296 @@
+@font-face {
+  font-family: Apercu-Light;
+  src: url(../Fonts/Apercu-Light.ttf);
+}
+@font-face {
+  font-family: ItalianPlateSpace_Bold;
+  src: url(../Fonts/ItalianPlateSpace_Bold.otf);
+}
+/* line 9, ../sass/style.scss */
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 18, ../sass/style.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 21, ../sass/style.scss */
+#main-container {
+  position: relative;
+  width: 70%;
+  height: 90vh;
+  border: 2px solid #FF1493;
+}
+
+/* line 27, ../sass/style.scss */
+nav a {
+  position: absolute;
+  color: black;
+  font-family: ItalianPlateSpace_Bold;
+  z-index: 10;
+  font-size: 18px;
+  transition: 0.5s linear;
+}
+/* line 34, ../sass/style.scss */
+nav a:nth-child(1) {
+  top: 15px;
+  left: 15px;
+  writing-mode: tb-rl;
+  -o-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+}
+/* line 41, ../sass/style.scss */
+nav a:nth-child(1):hover {
+  top: -23px;
+  left: 1px;
+  padding: 25px 10px;
+  -o-transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+/* line 52, ../sass/style.scss */
+nav a:nth-child(2) {
+  top: 15px;
+  left: 50%;
+  margin-left: -70px;
+}
+/* line 57, ../sass/style.scss */
+nav a:nth-child(2):hover {
+  box-sizing: border-box;
+  top: 0;
+  padding: 25px 10px;
+  writing-mode: tb-rl;
+  -o-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+}
+/* line 67, ../sass/style.scss */
+nav a:nth-child(3) {
+  top: 15px;
+  left: 53%;
+}
+/* line 70, ../sass/style.scss */
+nav a:nth-child(3):hover {
+  top: 0;
+  padding: 25px 10px;
+  writing-mode: tb-rl;
+  -o-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+}
+/* line 79, ../sass/style.scss */
+nav a:nth-child(4) {
+  top: 15px;
+  right: 15px;
+}
+/* line 82, ../sass/style.scss */
+nav a:nth-child(4):hover {
+  top: 40px;
+  right: -42px;
+  padding: 10px 25px;
+  -o-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+/* line 92, ../sass/style.scss */
+nav a:nth-child(5) {
+  top: 45%;
+  right: 15px;
+  writing-mode: tb-rl;
+  -o-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+}
+/* line 99, ../sass/style.scss */
+nav a:nth-child(5):hover {
+  right: 63px;
+  padding: 15px 10px;
+  -o-transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+/* line 108, ../sass/style.scss */
+nav a:nth-child(6) {
+  bottom: 15px;
+  right: 15px;
+  writing-mode: tb-rl;
+  -o-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+}
+/* line 115, ../sass/style.scss */
+nav a:nth-child(6):hover {
+  bottom: -33px;
+  right: 52px;
+  padding: 25px 10px;
+  -o-transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+/* line 125, ../sass/style.scss */
+nav a:nth-child(7) {
+  bottom: 15px;
+  left: 45%;
+}
+/* line 128, ../sass/style.scss */
+nav a:nth-child(7):hover {
+  bottom: 20px;
+  padding: 15px 10px;
+  -o-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+/* line 137, ../sass/style.scss */
+nav a:nth-child(8) {
+  bottom: 15px;
+  left: 15px;
+}
+/* line 141, ../sass/style.scss */
+nav a:nth-child(9) {
+  top: 45%;
+  left: 15px;
+  writing-mode: tb-rl;
+  -o-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+}
+/* line 148, ../sass/style.scss */
+nav a:nth-child(9):hover {
+  left: 18px;
+  padding: 25px 10px;
+  -o-transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+/* line 157, ../sass/style.scss */
+nav a:not(.nohover):hover {
+  color: white;
+  background: black;
+  text-align: center;
+}
+
+/*HOVER GALLERY*/
+/* line 164, ../sass/style.scss */
+.container {
+  position: relative;
+  top: 15%;
+  width: 80%;
+  min-width: 300px;
+  height: 70%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+}
+
+/* line 177, ../sass/style.scss */
+.container .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 184, ../sass/style.scss */
+.container .box {
+  width: 33.33%;
+  height: 50%;
+  z-index: 2;
+  cursor: pointer;
+  box-sizing: border-box;
+  background-size: cover;
+}
+
+/* line 194, ../sass/style.scss */
+.container .box:nth-child(1) {
+  background-image: url("../img/1.jpg");
+}
+/* line 197, ../sass/style.scss */
+.container .box:nth-child(2) {
+  background-image: url("../img/2.jpg");
+}
+/* line 200, ../sass/style.scss */
+.container .box:nth-child(3) {
+  background-image: url("../img/3.jpg");
+}
+/* line 203, ../sass/style.scss */
+.container .box:nth-child(4) {
+  background-image: url("../img/4.jpg");
+}
+/* line 206, ../sass/style.scss */
+.container .box:nth-child(5) {
+  background-image: url("../img/5.jpg");
+}
+/* line 209, ../sass/style.scss */
+.container .box:nth-child(6) {
+  background-image: url("../img/6.jpg");
+}
+
+/* line 213, ../sass/style.scss */
+.divGalleryContent {
+  position: relative;
+  background: white;
+  width: 100%;
+  height: 60%;
+  bottom: 75%;
+  z-index: 9;
+  font-family: Apercu-Light;
+  cusor: pointer;
+  display: none;
+}
+
+/* line 224, ../sass/style.scss */
+.divGalleryContent p {
+  text-align: center;
+  width: 60%;
+  margin: 2% auto 0;
+}
+
+/* line 229, ../sass/style.scss */
+.close {
+  position: absolute;
+  top: 5px;
+  right: 0;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  transition: 0.1s linear;
+}
+/* line 238, ../sass/style.scss */
+.close:before, .close:after {
+  content: "";
+  position: absolute;
+  top: 21px;
+  left: 10px;
+  width: 26px;
+  height: 2px;
+  background: black;
+}
+/* line 249, ../sass/style.scss */
+.close:before {
+  webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+/* line 254, ../sass/style.scss */
+.close:after {
+  webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}

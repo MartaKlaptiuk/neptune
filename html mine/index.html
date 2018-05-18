@@ -11,6 +11,44 @@
 	  crossorigin="anonymous"></script>
 </head>
 <body>
+		<div class="main-menu-wrap">
+			<ul class="block-menu">
+				<li class="first-menu-element"><a class="three-d" href="#">MENU
+					<span aria-hidden="true" class="three-d-box">
+						<span class="front">MENU</span>
+						<span class="back">MENU</span>
+					</span></a></li>
+				<li class="second-menu-element"><a class="three-d" href="#">STORE<span aria-hidden="true" class="three-d-box">
+						<span class="front">STORE</span>
+						<span class="back">STORE</span>
+					</span></a></li>
+				<li class="third-menu-element"><a class="three-d" href="#">WINE CLUB<span aria-hidden="true" class="three-d-box">
+						<span class="front">WINE CLUB</span>
+						<span class="back">WINE CLUB</span>
+					</span></a></li>
+				<li class="fourth-menu-element"><a class="three-d" href="#">FUNCTIONS<span aria-hidden="true" class="three-d-box">
+						<span class="front">FUNCTIONS</span>
+						<span class="back">FUNCTIONS</span>
+					</span></a></li>
+				<li class="fifth-menu-element"><a class="three-d" href="#">NEWS + EVENTS<span aria-hidden="true" class="three-d-box">
+						<span class="front">NEWS + EVENTS</span>
+						<span class="back">NEWS + EVENTS</span>
+					</span></a></li>
+				<li class="sixth-menu-element"><a class="three-d" href="#">CONTACT<span aria-hidden="true" class="three-d-box">
+						<span class="front">CONTACT</span>
+						<span class="back">CONTACT</span>
+					</span></a></li>
+				<li class="seventh-menu-element"><a class="three-d" href="#">GIFT CARDS<span aria-hidden="true" class="three-d-box">
+						<span class="front">GIFT CARDS</span>
+						<span class="back">GIFT CARDS</span>
+					</span></a></li>
+				<li class="eighth-menu-element"><a class="three-d"v href="#" class="nohover"><img src="../img/logo.png"></a></li>
+				<li class="ninth-menu-element"><a class="three-d" href="#">BOOKINGS<span aria-hidden="true" class="three-d-box">
+						<span class="front">BOOKINGS</span>
+						<span class="back">BOOKINGS</span>
+					</span></a></li>
+			</ul>
+		</div> 
 	<div class="main-wrapper">
 		<div class="container">
 			<div class="bg">
@@ -22,20 +60,27 @@
 					 <div class="box"></div>
 					 <div class="box"></div>
 
-					 <div class="overlay"></div>
+					 
 				</section>
 			</div>
 		</div>
 	</div>
 	<script type="text/javascript">
-		$('.box').mouseover(function(){
-		var bg = $(this).css('background-image');	  
-			$('.box').css("background", "none");
-			$('.menu').css("background-image", bg);	  
-		});
-		$('.box').mouseout(function(){		  
-			$('.box').css('background', "");
-			$('.menu').css('background', '');		  
+		// $('.box').mouseover(function(){
+		// var bg = $(this).css('background-image');	  
+		// 	$('.box').css("background", "none");
+		// 	$('.menu').css("background-image", bg);	
+		// 	$('.menu').css("background-position", "center"); 
+		// 	$('.menu').css("background-size", "cover");  
+		// });
+		// $('.box').mouseout(function(){		  
+		// 	$('.box').css('background', "");
+		// 	$('.menu').css('background', '');		  
+		// });
+
+		var card = document.querySelector('.card');
+		card.addEventListener( 'mouseover', function() {
+		  card.classList.toggle('is-flipped');
 		});
 	</script>
 </body>
