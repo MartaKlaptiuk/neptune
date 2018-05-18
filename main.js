@@ -15,11 +15,11 @@
 		$('.boxWineStore').mouseover(function(){
 		var bg = $(this).css('background-image');	  
 			$('.boxWineStore').css("background", "none");
-			$('.container').css("background-image", bg);	  
+			$('.wine-club').css("background-image", bg);	  
 		});
 		$('.boxWineStore').mouseout(function(){		  
 			$('.boxWineStore').css('background', "");
-			$('.container').css('background', '');		  
+			$('.wine-club').css('background', '');		  
 		});
 
 		$(".boxWineStore").click(function(){
