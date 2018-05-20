@@ -1,17 +1,9 @@
-@font-face {
-  font-family: Apercu-Light; 
-  src: url(../Fonts/Apercu-Light.ttf);
-}
-@font-face {
-  font-family: ItalianPlateSpace_Bold; 
-  src: url(../Fonts/ItalianPlateSpace_Bold.otf); 
-}
 html, body {
-    width: 100%;
-    height: 100vh;
-    margin: 0 !important;
-    padding: 0 !important;
-    box-sizing: border-box;
+  width: 100%;
+  height: 100vh;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box;
 }
 ul {
   margin: 0;
@@ -62,7 +54,7 @@ section {
   width: 100%;
   height: 100%;
   min-width: 300px; 
-  overflow-y: hidden;
+  
 }
 
 .store,
@@ -81,25 +73,45 @@ section {
   background-repeat: no-repeat;
   background-position: center;
 }
-.store .box{
-	&:nth-child(1) {
-  	background-image: url("../img/1.jpg");
+
+.first-store-img {
+   background-image: url("../img/1.jpg");
+ }
+ .second-store-img {
+   background-image: url("../img/2.jpg");
+ }
+ .third-store-img {
+   background-image: url("../img/3.jpg");
+ }
+ .fourth-store-img {
+   background-image: url("../img/4.jpg");
+ }
+ .fifth-store-img {
+   background-image: url("../img/5.jpg");
+ }
+ .sixth-store-img {
+   background-image: url("../img/6.jpg");
+ }
+.div-gallery-content{
+  background: white;
+  width: 100%;
+  height: 50%;
+  z-index: 9;
+  font-family: 'aperculight'; 
+  display: none;
 }
-	&:nth-child(2) {
- 	 background-image: url("../img/2.jpg");
+.center-position{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
 }
-	&:nth-child(3) {
-  	background-image: url("../img/3.jpg");
-}
-	&:nth-child(4) {
- 	 background-image: url("../img/4.jpg");
-}
-	&:nth-child(5) {
-  	background-image: url("../img/5.jpg");
-}
-	&:nth-child(6) {
-  	background-image: url("../img/6.jpg");
-}
+.center-position p{
+  position: relative;
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
 }
 
 .main-menu-wrap ul li{
@@ -107,15 +119,19 @@ section {
   color: black;
   z-index: 10;
   font-size: 18px;
+  a{
+    font-family: 'italian_plate_spacebold';
+  }
 }
 
-/*.scene {
-    position: fixed;
-    top: 50px;
-    left: 20px;
-    width: 150px;
-    height: 70px; 
-    perspective: 600px;
+.scene {
+  // position: fixed;
+  // top: 50px;
+  // left: 20px;
+  // width: 150px;
+  // height: 70px; 
+  perspective: 600px;
+  // border: 1px solid black;
 }
 
 .card {
@@ -124,34 +140,44 @@ section {
   cursor: pointer;
   transform-style: preserve-3d;
   transform-origin: center right;
-  transition: transform 1s; 
+  transition: transform 1s;
+  -webkit-transition: transform 1s;
+  position: relative;
+  &.is-flipped {
+    transform: translateX(-100%) rotateY(-180deg);
+    -o-transform: translateX(-100%) rotateY(-180deg);
+    -webkit-transform: translateX(-100%) rotateY(-180deg);
+    -moz-transform: translateX(-100%) rotateY(-180deg);
+  }
 }
 
-.card.is-flipped {
-  transform: translateX(-100%) rotateY(-180deg);
-}
 
-.card__face {
-  position: absolute;
+.card-face {
+  // position: absolute;
   display: block;
-  width: 100%;
-  height: 100%;
-  line-height: 70px;
+
+  // line-height: 70px;
   text-align: center;
-  font-size: 40px;
-  font-family: ItalianPlateSpace_Bold;
+  font-size: 16px;
+  // padding: 10px;
+  font-family: 'italian_plate_spacebold';
   backface-visibility: hidden;
 }
 
-.card__face--front {
+.card-face-front {
   color: black;
+  transform: rotateX(0deg)
 }
 
-.card__face--back {
+.card-face-back {
   color: white;
   background-color: black;
   transform: rotateY(180deg);
-}*/
+  position: absolute;
+  top: 0;
+  right: 0; 
+}
+
 
 
 .first-menu-element{
@@ -161,15 +187,22 @@ section {
   -o-transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
+  span{
+    -o-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    display: block;
+  }
 }
 .second-menu-element{
   top: 15px;
-  left: 45%;
-  margin-left: -50px;
+  left: calc(50% - 55px);
+  // left: 45%;
+  // margin-left: -50px;
 }
 .third-menu-element{
   top: 15px;
-  left: 52%;
+  right: calc(50% - 80px);
 }
 .fourth-menu-element{
   top: 15px;
@@ -182,6 +215,12 @@ section {
   -o-transform: rotate(360deg);
   -webkit-transform: rotate(360deg);
   -moz-transform: rotate(360deg);
+  span{
+    -o-transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    display: block;
+  }
 }
 .sixth-menu-element{
   bottom: 15px;
@@ -190,10 +229,17 @@ section {
   -o-transform: rotate(360deg);
   -webkit-transform: rotate(360deg);
   -moz-transform: rotate(360deg);
+  span{
+    -o-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    display: block;
+  }
 }
 .seventh-menu-element{
   bottom: 15px;
-  left: 45%;
+  // left: calc(50% - 20px);
+  left: calc(50% - 70px);
 }
 .eighth-menu-element{
   bottom: 15px;
@@ -206,11 +252,63 @@ section {
   -o-transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
+  span{
+    -o-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    display: block;
+  }
 }
-
+.menu-flip{
+  padding: 10px 40px;
+  right: -65px;
+  top: -5px;
+}
+.store-flip{
+  padding: 19px 15px;
+  right: 10px;
+  top: -15px;
+  writing-mode: tb-rl;
+}
+.wine-flip{
+  padding: 19px 15px;
+  right: 20px;
+  top: -15px;
+  writing-mode: tb-rl;
+  white-space: nowrap;
+}
+.functions-flip{
+  padding: 19px 30px 19px 15px;
+  right: 31px;
+  top: -15px;
+  writing-mode: tb-rl;
+}
+.news-flip{
+  padding: 0 40px;
+  right: -65px;
+  top: 15px;
+  white-space: nowrap;
+}
+.contact-flip {
+  padding: 0 40px;
+  right: -65px;
+  top: 15px;
+}
+.gift-flip{
+  padding: 19px 15px;
+  right: 15px;
+  top: -70px;
+  writing-mode: tb-rl;
+  white-space: nowrap;
+}
+.bookings-flip{
+  padding: 10px 40px;
+  right: -65px;
+  top: -5px;
+}
 /*MENU*/
 
-.menu .menuImg {
+.menu .menu-img {
   width: 50%;
   height: 100%;
   z-index: 2;
@@ -223,26 +321,24 @@ section {
   align-items: center;  
   justify-content: center;
 }
-.menu .menuImg:nth-child(1) {
+.menu .menu-img:nth-child(1) {
   background-image: url("../img/EAT3.png");
 }
-.menu .menuImg:nth-child(2) {
+.menu .menu-img:nth-child(2) {
   background-image: url("../img/DRINK1.png");
 }
-.menu .menuImg h1{
-  font-family: ItalianPlateSpace_Bold;
+.menu .menu-img h1{
+  font-family: 'italian_plate_spacebold';
   color: black;
   font-size: 32px;
 }
 .close{
-    top: 15%;
-    left: 95%;
-    width: 55px;
-    height: 55px;
-    cursor: pointer;
-    position: sticky;
-
-
+  position: absolute;
+  top: 5px;
+  right: 0;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
   &:before,
   &:after {
     content: "";
@@ -253,7 +349,6 @@ section {
     height: 2px;
     background: black;
   }
-
   &:before {
     webkit-transform: rotate(45deg);
     transform: rotate(45deg);
@@ -263,11 +358,17 @@ section {
     transform: rotate(-45deg);
   }
 }
-.whiteCross{
-    &:before,
-    &:after {
-    background: white;
+.color-menu-BG .close{
+  top: 15%;
+  left: 87%;
+  position: sticky;
 }
+
+.white-cross{
+  &:before,
+  &:after {
+    background: white;
+  }
 }
 /*MENU-EAT AND DRINK*/
 .menu-eat,
@@ -276,8 +377,9 @@ section {
   height: 100%;
   z-index: 2;
   box-sizing: border-box;
-  font-family: Apercu-Light;
+  font-family: 'aperculight'; 
   background-size: cover !important;
+  overflow: hidden;
 }
 .menu-eat{
   background-image: url("../img/EAT-LARGE2.png");
@@ -307,15 +409,20 @@ section {
   width: 80%;
   position: absolute;
 }
-.colorMenuBG{
+.color-menu-BG{
   position: relative;
-  width: 80%;
+  width: 100%;
   height: 100%;
   overflow-y: scroll;
   background-color: transparent;
   margin: 0 auto;
+  overflow-y: scroll;
+  padding-right: 17px;
 }
-.sideVerticalText{
+// .color-menu-BG::-webkit-scrollbar { width: 0; }
+// .color-menu-BG { -ms-overflow-style: none; }
+
+.side-vertical-text{
   width: 10%;
   height: 100%;
   writing-mode: tb-rl;
@@ -328,20 +435,21 @@ section {
   color: white;
   position: sticky;
   top: 0;
+  left: 10%;
 }
-.menu-drink .sideVerticalText a{
+.menu-drink .side-vertical-text a{
   color: white;
 }
-.mainMenuText{
+.main-menu-text{
   position: absolute;
-  width: 80%;
+  width: 60%;
   height: auto;
   top: 0;
-  left: 15%;
+  left: 20%;
   margin-top: 10%;
   padding-bottom: 15%;
 }
-.mainMenuText h5{
+.main-menu-text h5{
   margin: 30px 0 0;
   text-decoration: underline;
 }
@@ -350,16 +458,16 @@ table{
 }
 table tr td{
   padding-bottom: 7px;
-    &:first-child{
+  &:first-child{
     width: 92%;
-}
-      &:last-child{
-      width: 10%;
-}
+  }
+  &:last-child{
+    width: 10%;
+  }
 }
 
 /*WINE-CLUB*/
-.boxWineStore{
+.box-wine-store{
   width: 50%;
   height: 100%;
   z-index: 2;
@@ -367,43 +475,60 @@ table tr td{
   box-sizing: border-box;
   background-size: cover !important;
 }
-.wine-club .boxWineStore{
+.wine-club .box-wine-store{
   &:nth-child(1) {
     background-image: url("../img/Wine1.png");
-}
+  }
   &:nth-child(2) {
    background-image: url("../img/Wine2.png");
+ }
 }
-}
-.boxWineContent{
-  position: relative;
+.box-wine-content{
   width: 100%;
   height: 50%;
-  bottom: 75%;
   background-color: black;
   z-index: 9;
-  font-family: Apercu-Light;
+  font-family: 'aperculight'; 
   color: white;
-  cursor: pointer;
   display: none;
 }
-.boxWineContent p{
-  position: relative;
+.flex-center{
+  display: flex;
+  align-items: center;  
+  justify-content: center;
+}
+.box-wine-content p{
+  // position: relative;
   text-align: center;
   width: 60%;
-  top: 35%;
-  margin: 0 auto;
+  // top: 35%;
+  // margin: 0 auto;
+  
 }
 
-/*NEWS*/
-.news{
-  border: 1px solid black;
+/*NEWS AND BOOKINGS*/
+.news,
+.bookings,
+.contact{
   text-align: center;
+  display: flex;
+  align-items: center;  
+  justify-content: center;
 }
-.news h2{
-  font-family: ItalianPlateSpace_Bold; 
+.news-wrap{
+  width: 50%;
+}
+.block-of-text h2{
+  font-family: 'italian_plate_spacebold'; 
   text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: 5% 0 0 0;
 }
-.news p{
-  font-family: Apercu-Light; 
+.block-of-text p{
+  font-family: 'aperculight'; 
+  margin-top: 0;
+}
+.news img{
+  margin-top: 10%;
+  width: 6%;
 }
