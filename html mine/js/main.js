@@ -1,14 +1,19 @@
 		$(document).ready()
 // MAIN MENU EFFECT
-		$('.card').mouseover(
-			function(){
-				$(this).toggleClass('is-flipped');
-				$('.card').not(this).removeClass('is-flipped');
-			}
-			);
+		$('.card').mouseenter(function(){
+				$(this).addClass('is-flipped');
+		});
+
+		$('.card').mouseleave(function(){
+			var that = this;
+				setTimeout(function(){
+					$(that).removeClass('is-flipped');
+				}, 500);
+		});
+		
 // STORE PAGE
 		$('.box').mouseover(function(){
-		var bg = $(this).css('background-image');	  
+		var bg = $(this).css('background-image');
 			$('.box').css("background", "none");
 			$('.store').css("background-image", bg);	
 			$('.store').css("background-position", "center"); 
@@ -18,14 +23,17 @@
 			$('.box').css('background', "");
 			$('.store').css('background', '');		  
 		});
-
+// MODAL WINDOW
 		$(".box").click(function(){
-			$(".div-gallery-content").toggle();
+			$(".modal-content").fadeToggle("slow");
 		});
-		// var card = document.querySelector('.card');
-		// card.addEventListener( 'mouseover', function() {
-		// 	card.classList.toggle('is-flipped');
-		// });
+		$(".box-wine-store").click(function(){
+			$(".modal-content").fadeToggle("slow");
+		});
+		$(".close").click(function(){
+			$(".modal-content").fadeOut("slow");
+		});
+
 
 // WINE HOVER IMG
 		$('.box-wine-store').mouseover(function(){
@@ -38,8 +46,9 @@
 			$('.wine-club').css('background', '');		  
 		});
 
-		$(".box-wine-store").click(function(){
-			$(".box-wine-content").toggle();
-		});
+	
+			$(".color-menu-BG").fadeIn("slow");
+			// $(".menu-eat").fadeIn("slow");
+
 
 

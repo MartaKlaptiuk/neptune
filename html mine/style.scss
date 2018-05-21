@@ -53,10 +53,8 @@ section {
   position: relative;
   width: 100%;
   height: 100%;
-  min-width: 300px; 
-  
+  min-width: 300px;  
 }
-
 .store,
 .menu,
 .wine-club{
@@ -73,24 +71,23 @@ section {
   background-repeat: no-repeat;
   background-position: center;
 }
-
 .first-store-img {
-   background-image: url("../img/1.jpg");
+   background-image: url("img/1.jpg");
  }
  .second-store-img {
-   background-image: url("../img/2.jpg");
+   background-image: url("img/2.jpg");
  }
  .third-store-img {
-   background-image: url("../img/3.jpg");
+   background-image: url("img/3.jpg");
  }
  .fourth-store-img {
-   background-image: url("../img/4.jpg");
+   background-image: url("img/4.jpg");
  }
  .fifth-store-img {
-   background-image: url("../img/5.jpg");
+   background-image: url("img/5.jpg");
  }
  .sixth-store-img {
-   background-image: url("../img/6.jpg");
+   background-image: url("img/6.jpg");
  }
 .div-gallery-content{
   background: white;
@@ -108,12 +105,10 @@ section {
   transform: translate(-50%, -50%);
 }
 .center-position p{
-  position: relative;
   text-align: center;
   width: 60%;
   margin: 0 auto;
 }
-
 .main-menu-wrap ul li{
   position: fixed;
   color: black;
@@ -123,17 +118,9 @@ section {
     font-family: 'italian_plate_spacebold';
   }
 }
-
 .scene {
-  // position: fixed;
-  // top: 50px;
-  // left: 20px;
-  // width: 150px;
-  // height: 70px; 
   perspective: 600px;
-  // border: 1px solid black;
 }
-
 .card {
   width: 100%;
   height: 100%;
@@ -150,25 +137,17 @@ section {
     -moz-transform: translateX(-100%) rotateY(-180deg);
   }
 }
-
-
 .card-face {
-  // position: absolute;
   display: block;
-
-  // line-height: 70px;
   text-align: center;
   font-size: 16px;
-  // padding: 10px;
   font-family: 'italian_plate_spacebold';
   backface-visibility: hidden;
 }
-
 .card-face-front {
   color: black;
   transform: rotateX(0deg)
 }
-
 .card-face-back {
   color: white;
   background-color: black;
@@ -177,9 +156,6 @@ section {
   top: 0;
   right: 0; 
 }
-
-
-
 .first-menu-element{
   top: 15px;
   left: 15px;
@@ -197,8 +173,6 @@ section {
 .second-menu-element{
   top: 15px;
   left: calc(50% - 55px);
-  // left: 45%;
-  // margin-left: -50px;
 }
 .third-menu-element{
   top: 15px;
@@ -238,7 +212,6 @@ section {
 }
 .seventh-menu-element{
   bottom: 15px;
-  // left: calc(50% - 20px);
   left: calc(50% - 70px);
 }
 .eighth-menu-element{
@@ -307,7 +280,6 @@ section {
   top: -5px;
 }
 /*MENU*/
-
 .menu .menu-img {
   width: 50%;
   height: 100%;
@@ -315,17 +287,16 @@ section {
   cursor: pointer;
   box-sizing: border-box;
   background-size: cover !important;
-  background-repeat: no-repeat;
   background-position: center;
   display: flex;
   align-items: center;  
   justify-content: center;
 }
-.menu .menu-img:nth-child(1) {
-  background-image: url("../img/EAT3.png");
+.menu .menu-img-eat {
+  background-image: url("img/EAT3.png");
 }
-.menu .menu-img:nth-child(2) {
-  background-image: url("../img/DRINK1.png");
+.menu .menu-img-drink {
+  background-image: url("img/DRINK1.png");
 }
 .menu .menu-img h1{
   font-family: 'italian_plate_spacebold';
@@ -363,7 +334,6 @@ section {
   left: 87%;
   position: sticky;
 }
-
 .white-cross{
   &:before,
   &:after {
@@ -382,11 +352,11 @@ section {
   overflow: hidden;
 }
 .menu-eat{
-  background-image: url("../img/EAT-LARGE2.png");
+  background-image: url("img/EAT-LARGE2.png");
   color: black;
 }
 .menu-drink{
-  background-image: url("../img/DRINK-LARGE1.png");
+  background-image: url("img/DRINK-LARGE1.png");
   color: white;
 }
 .menu-eat::before {
@@ -418,10 +388,8 @@ section {
   margin: 0 auto;
   overflow-y: scroll;
   padding-right: 17px;
+  display: none;
 }
-// .color-menu-BG::-webkit-scrollbar { width: 0; }
-// .color-menu-BG { -ms-overflow-style: none; }
-
 .side-vertical-text{
   width: 10%;
   height: 100%;
@@ -465,7 +433,6 @@ table tr td{
     width: 10%;
   }
 }
-
 /*WINE-CLUB*/
 .box-wine-store{
   width: 50%;
@@ -477,10 +444,10 @@ table tr td{
 }
 .wine-club .box-wine-store{
   &:nth-child(1) {
-    background-image: url("../img/Wine1.png");
+    background-image: url("img/Wine1.png");
   }
   &:nth-child(2) {
-   background-image: url("../img/Wine2.png");
+   background-image: url("img/Wine2.png");
  }
 }
 .box-wine-content{
@@ -492,20 +459,10 @@ table tr td{
   color: white;
   display: none;
 }
-.flex-center{
-  display: flex;
-  align-items: center;  
-  justify-content: center;
-}
 .box-wine-content p{
-  // position: relative;
   text-align: center;
-  width: 60%;
-  // top: 35%;
-  // margin: 0 auto;
-  
+  width: 60%;  
 }
-
 /*NEWS AND BOOKINGS*/
 .news,
 .bookings,

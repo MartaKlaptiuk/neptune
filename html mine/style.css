@@ -65,22 +65,22 @@ section {
   background-position: center; }
 
 .first-store-img {
-  background-image: url("../img/1.jpg"); }
+  background-image: url("img/1.jpg"); }
 
 .second-store-img {
-  background-image: url("../img/2.jpg"); }
+  background-image: url("img/2.jpg"); }
 
 .third-store-img {
-  background-image: url("../img/3.jpg"); }
+  background-image: url("img/3.jpg"); }
 
 .fourth-store-img {
-  background-image: url("../img/4.jpg"); }
+  background-image: url("img/4.jpg"); }
 
 .fifth-store-img {
-  background-image: url("../img/5.jpg"); }
+  background-image: url("img/5.jpg"); }
 
 .sixth-store-img {
-  background-image: url("../img/6.jpg"); }
+  background-image: url("img/6.jpg"); }
 
 .div-gallery-content {
   background: white;
@@ -98,7 +98,6 @@ section {
   transform: translate(-50%, -50%); }
 
 .center-position p {
-  position: relative;
   text-align: center;
   width: 60%;
   margin: 0 auto; }
@@ -275,17 +274,16 @@ section {
   cursor: pointer;
   box-sizing: border-box;
   background-size: cover !important;
-  background-repeat: no-repeat;
   background-position: center;
   display: flex;
   align-items: center;
   justify-content: center; }
 
-.menu .menu-img:nth-child(1) {
-  background-image: url("../img/EAT3.png"); }
+.menu .menu-img-eat {
+  background-image: url("img/EAT3.png"); }
 
-.menu .menu-img:nth-child(2) {
-  background-image: url("../img/DRINK1.png"); }
+.menu .menu-img-drink {
+  background-image: url("img/DRINK1.png"); }
 
 .menu .menu-img h1 {
   font-family: 'italian_plate_spacebold';
@@ -334,11 +332,11 @@ section {
   overflow: hidden; }
 
 .menu-eat {
-  background-image: url("../img/EAT-LARGE2.png");
+  background-image: url("img/EAT-LARGE2.png");
   color: black; }
 
 .menu-drink {
-  background-image: url("../img/DRINK-LARGE1.png");
+  background-image: url("img/DRINK-LARGE1.png");
   color: white; }
 
 .menu-eat::before {
@@ -369,7 +367,8 @@ section {
   background-color: transparent;
   margin: 0 auto;
   overflow-y: scroll;
-  padding-right: 17px; }
+  padding-right: 17px;
+  display: none; }
 
 .side-vertical-text {
   width: 10%;
@@ -422,9 +421,9 @@ table tr td {
   background-size: cover !important; }
 
 .wine-club .box-wine-store:nth-child(1) {
-  background-image: url("../img/Wine1.png"); }
+  background-image: url("img/Wine1.png"); }
 .wine-club .box-wine-store:nth-child(2) {
-  background-image: url("../img/Wine2.png"); }
+  background-image: url("img/Wine2.png"); }
 
 .box-wine-content {
   width: 100%;
@@ -434,11 +433,6 @@ table tr td {
   font-family: 'aperculight';
   color: white;
   display: none; }
-
-.flex-center {
-  display: flex;
-  align-items: center;
-  justify-content: center; }
 
 .box-wine-content p {
   text-align: center;
