@@ -1,10 +1,15 @@
 		$(document).ready()
 // MAIN MENU EFFECT
-		$('.card').mouseenter(function(){
+		$('.scene').mouseenter(function(){
 				$(this).addClass('is-flipped');
 		});
 
-		$('.card').mouseleave(function(){
+		// $('.card').mouseenter(function(){
+		// 		$(".menu-content-wrapper").fadeIn("slow");
+		// });
+
+
+		$('.scene').mouseleave(function(){
 			var that = this;
 				setTimeout(function(){
 					$(that).removeClass('is-flipped');
@@ -51,4 +56,6 @@
 			// $(".menu-eat").fadeIn("slow");
 
 
-
+			$(".burger-button").click(function(){
+			$(".mobile-menu").addClass("mobile-menu-show");
+		});
