@@ -29,21 +29,6 @@ a {
 .desktop-only {
   display: none; }
 
-@media (min-width: 768px) {
-  .container {
-    width: 750px; }
-
-  .mobile-only {
-    display: none; }
-
-  .desktop-only {
-    display: block; } }
-@media (min-width: 992px) {
-  .container {
-    width: 970px; } }
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px; } }
 .bg {
   width: 100%;
   height: 100vh;
@@ -97,6 +82,9 @@ section {
   z-index: 9;
   font-family: 'aperculight';
   display: none; }
+
+.modal-content {
+  overflow-y: auto; }
 
 .center-position {
   position: absolute;
@@ -162,13 +150,12 @@ section {
   right: 0; }
 
 .first-menu-element {
+  writing-mode: tb-rl;
   top: 15px;
   left: 15px;
   -o-transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg); }
-  .first-menu-element .card-face {
-    writing-mode: tb-rl; }
   .first-menu-element span {
     -o-transform: rotate(90deg);
     -webkit-transform: rotate(90deg);
@@ -226,17 +213,14 @@ section {
 .ninth-menu-element {
   top: 45%;
   left: 15px; }
-  .ninth-menu-element .card-face {
-    writing-mode: tb-rl; }
-  .ninth-menu-element .card {
-    -o-transform: rotate(180deg);
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg); }
   .ninth-menu-element span {
-    -o-transform: rotate(90deg);
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
     display: block; }
+
+.ninth-menu-element a.card-face.card-face-front {
+  writing-mode: tb-rl;
+  -o-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg); }
 
 .menu-flip {
   padding: 10px 40px;
@@ -251,14 +235,14 @@ section {
 
 .wine-flip {
   padding: 19px 15px;
-  right: 20px;
+  right: 21px;
   top: -15px;
   writing-mode: tb-rl;
   white-space: nowrap; }
 
 .functions-flip {
-  padding: 19px 30px 19px 15px;
-  right: 31px;
+  padding: 19px 20px 19px 15px;
+  right: 60px;
   top: -15px;
   writing-mode: tb-rl; }
 
@@ -281,34 +265,61 @@ section {
   white-space: nowrap; }
 
 .bookings-flip {
-  padding: 10px 40px;
-  right: 15px;
-  top: -5px; }
+  padding: 15px 31px;
+  right: -15px; }
 
 .menu-content-wrapper {
   position: absolute;
-  transition: top 0.5s ease-in-out 0.5s; }
+  width: 200px; }
   .menu-content-wrapper p {
     width: 80%;
     font-size: 14px;
-    font-family: 'aperculight'; }
+    font-family: 'aperculight';
+    padding: 0;
+    margin: 15px 0 0 0; }
   .menu-content-wrapper .menu-content-footer p {
-    font-family: 'italian_plate_spacebold'; }
-
-.store-menu-wrapper {
-  top: -600%;
-  left: calc(50% - 175px); }
+    font-family: 'italian_plate_spacebold';
+    text-transform: uppercase; }
 
 .scene.is-flipped:hover .menu-content-wrapper {
   top: -15px;
   transition: top 0.5s ease-in-out; }
+.scene.is-flipped:hover .news-menu-wrapper {
+  right: 25px;
+  top: 100px;
+  transition: right 0.5s ease-in-out; }
+.scene.is-flipped:hover .bookings-menu-wrapper {
+  left: 25px;
+  top: 50px;
+  transition: left 0.5s ease-in-out; }
+
+.store-menu-wrapper {
+  top: -200px;
+  left: -170px;
+  transition: top 0.5s ease-in-out 0.5s; }
 
 .wine-menu-wrapper {
-  top: -600%;
-  right: calc(50% - 210px); }
+  top: -200px;
+  left: 60px;
+  transition: top 0.5s ease-in-out 0.5s; }
 
 .functions-menu-wrapper {
-  top: -600%; }
+  top: -200px;
+  right: -10px;
+  transition: top 0.5s ease-in-out 0.5s; }
+
+.news-menu-wrapper {
+  top: 100px;
+  right: -250px;
+  transition: right 0.5s ease-in-out 0.5s; }
+  .news-menu-wrapper .header-of-story {
+    font-family: 'italian_plate_spacebold';
+    margin-bottom: -15px; }
+
+.bookings-menu-wrapper {
+  top: 50px;
+  left: -250px;
+  transition: left 0.5s ease-in-out 0.5s; }
 
 /*MENU*/
 .menu .menu-img {
@@ -356,10 +367,10 @@ section {
     webkit-transform: rotate(-45deg);
     transform: rotate(-45deg); }
 
-.color-menu-BG .close {
+.menu-eat .close,
+.menu-drink .close {
   top: 15%;
-  left: 87%;
-  position: sticky; }
+  right: 10%; }
 
 .white-cross:before, .white-cross:after {
   background: white; }
@@ -415,19 +426,15 @@ section {
   display: none; }
 
 .side-vertical-text {
-  width: 10%;
   height: 100%;
+  position: absolute;
   writing-mode: tb-rl;
-  -o-transform: rotate(180deg);
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  position: sticky;
+  -o-transform: translate(-50%, 0%) rotate(180deg);
+  -webkit-transform: translate(-50%, 0%) rotate(180deg);
+  -moz-transform: translate(-50%, 0%) rotate(180deg);
+  left: 15%;
   top: 0;
-  left: 10%; }
+  text-align: center; }
 
 .menu-drink .side-vertical-text a {
   color: white; }
@@ -493,25 +500,26 @@ table tr td {
 
 .news-wrap {
   width: 50%; }
+  .news-wrap img {
+    margin-top: 10%;
+    width: 40px; }
+
+.block-of-text {
+  margin-top: 5%; }
 
 .block-of-text h2 {
   font-family: 'italian_plate_spacebold';
   text-transform: uppercase;
   letter-spacing: 3px;
-  margin: 5% 0 0 0; }
+  margin-bottom: 0; }
 
 .block-of-text p {
   font-family: 'aperculight';
   margin-top: 0; }
 
-.news img {
-  margin-top: 10%;
-  width: 6%; }
-
 .mobile-menu {
   display: none; }
   .mobile-menu.mobile-menu-show {
-    display: block;
     display: block;
     position: fixed;
     z-index: 9999;
@@ -558,5 +566,47 @@ table tr td {
       text-align: center;
       display: block;
       font-family: 'italian_plate_spacebold'; }
+
+.mobile-menu .main-menu-text {
+  width: 55%; }
+
+@-moz-document url-prefix() {
+  .functions-flip {
+    right: 26px; }
+
+  .wine-menu-wrapper {
+    left: 85px; }
+
+  .store-menu-wrapper {
+    left: -135px; }
+
+  .functions-menu-wrapper {
+    right: -10px; }
+
+  .fifth-menu-element,
+  .sixth-menu-element {
+    right: 45px; }
+
+  .news-flip,
+  .contact-flip {
+    right: -56px; } }
+@media (min-width: 768px) {
+  .container {
+    width: 750px; }
+
+  .mobile-only {
+    display: none; }
+
+  .desktop-only {
+    display: block; }
+
+  .main-menu-text {
+    width: 55%; } }
+@media (min-width: 992px) {
+  .container {
+    width: 970px; } }
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px; } }
 
 /*# sourceMappingURL=style.css.map */
