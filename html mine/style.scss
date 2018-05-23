@@ -42,7 +42,6 @@ section {
   position: relative;
   width: 100%;
   height: 100%;
-  min-width: 300px;  
 }
 .store,
 .menu,
@@ -95,11 +94,11 @@ section {
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
-}
-.center-position p{
+  p{
   text-align: center;
   width: 60%;
   margin: 0 auto;
+}
 }
 .main-menu-wrap ul li{
   position: fixed;
@@ -361,17 +360,17 @@ transition: top 0.5s ease-in-out 0.5s;
   display: flex;
   align-items: center;  
   justify-content: center;
+    h1{
+    font-family: 'italian_plate_spacebold';
+    color: black;
+    font-size: 32px;
+  }
 }
 .menu .menu-img-eat {
   background-image: url("img/EAT3.png");
 }
 .menu .menu-img-drink {
   background-image: url("img/DRINK1.png");
-}
-.menu .menu-img h1{
-  font-family: 'italian_plate_spacebold';
-  color: black;
-  font-size: 32px;
 }
 .close{
   position: absolute;
@@ -380,6 +379,7 @@ transition: top 0.5s ease-in-out 0.5s;
   width: 55px;
   height: 55px;
   cursor: pointer;
+  z-index: 100;
   &:before,
   &:after {
     content: "";
@@ -470,6 +470,7 @@ transition: top 0.5s ease-in-out 0.5s;
   left: 15%;
   top: 0;
   text-align: center;
+  z-index: 100;
 }
 .menu-drink .side-vertical-text a{
   color: white;
@@ -482,10 +483,10 @@ transition: top 0.5s ease-in-out 0.5s;
   left: 20%;
   margin-top: 10%;
   padding-bottom: 15%;
-}
-.main-menu-text h5{
-  margin: 30px 0 0;
-  text-decoration: underline;
+    h5{
+    margin: 30px 0 0;
+    text-decoration: underline;
+  }
 }
 table{
   width: 100%;
@@ -508,13 +509,11 @@ table tr td{
   box-sizing: border-box;
   background-size: cover !important;
 }
-.wine-club .box-wine-store{
-  &:nth-child(1) {
+.wine-store-img-first{
     background-image: url("img/Wine1.png");
   }
-  &:nth-child(2) {
+.wine-store-img-second {
    background-image: url("img/Wine2.png");
- }
 }
 .box-wine-content{
   width: 100%;
@@ -524,15 +523,17 @@ table tr td{
   font-family: 'aperculight'; 
   color: white;
   display: none;
-}
-.box-wine-content p{
+  p{
   text-align: center;
   width: 60%;  
 }
+}
+
 /*NEWS AND BOOKINGS*/
 .news,
 .bookings,
-.contact{
+.contact,
+.functions{
   text-align: center;
   display: flex;
   align-items: center;  
@@ -547,19 +548,25 @@ table tr td{
 }
 .block-of-text{
   margin-top: 5%;
-}
-.block-of-text h2{
+  h2{
   font-family: 'italian_plate_spacebold'; 
   text-transform: uppercase;
   letter-spacing: 3px;
   margin-bottom: 0;
-
 }
-.block-of-text p{
+  p{
   font-family: 'aperculight'; 
   margin-top: 0;
 }
-
+}
+.functions{
+  .center-position{
+    width: 50%;
+  }
+}
+.functions-footer{
+  margin-top: 20px;
+}
 
 .mobile-menu{
   &.mobile-menu-show{
@@ -618,6 +625,17 @@ table tr td{
       font-family: 'italian_plate_spacebold'; 
     }
   }
+  .vertical-mobile-logo{
+    position: fixed;
+    left: -20px;
+    bottom: 35px;
+    img{
+      width: 100px;
+      -o-transform: rotate(270deg);
+      -webkit-transform: rotate(270deg);
+      -moz-transform: rotate(270deg);
+    }
+  }
 }
 .mobile-menu .main-menu-text {
     width: 55%;
@@ -657,6 +675,12 @@ table tr td{
 }
   .main-menu-text {
     width: 55%;
+}
+
+}
+@media (max-width: 768px){
+  .menu-eat::before{
+  width: 100%;
 }
 }
 @media (min-width: 992px) {
